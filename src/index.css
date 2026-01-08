@@ -4,94 +4,94 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap');
 
-/* ESG Portfolio Design System - Olive Green & Beige with Terracotta Accent */
+/* ESG Portfolio Design System - Deep Forest Green & Warm Beige with Terracotta Accent */
 
 @layer base {
   :root {
     /* Warm cream background */
-    --background: 36 43% 97%;
-    --foreground: 84 18% 25%;
+    --background: 40 35% 96%;
+    --foreground: 150 25% 18%;
 
     /* Card styling */
-    --card: 40 33% 96%;
-    --card-foreground: 84 18% 25%;
+    --card: 42 30% 94%;
+    --card-foreground: 150 25% 18%;
 
-    --popover: 36 43% 97%;
-    --popover-foreground: 84 18% 25%;
+    --popover: 40 35% 96%;
+    --popover-foreground: 150 25% 18%;
 
-    /* Olive green primary */
-    --primary: 84 18% 35%;
-    --primary-foreground: 36 43% 97%;
+    /* Deep forest green primary - much darker and punchier */
+    --primary: 150 30% 22%;
+    --primary-foreground: 40 35% 96%;
 
-    /* Light olive secondary */
-    --secondary: 84 15% 90%;
-    --secondary-foreground: 84 18% 25%;
+    /* Light sage secondary */
+    --secondary: 140 15% 88%;
+    --secondary-foreground: 150 25% 18%;
 
-    /* Muted olive tones */
-    --muted: 40 20% 92%;
-    --muted-foreground: 84 10% 45%;
+    /* Muted sage tones */
+    --muted: 45 18% 90%;
+    --muted-foreground: 150 15% 40%;
 
-    /* Terracotta accent for punch */
-    --accent: 14 45% 57%;
-    --accent-foreground: 36 43% 97%;
+    /* Burnt terracotta accent for punch */
+    --accent: 18 55% 50%;
+    --accent-foreground: 40 35% 96%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 40 25% 88%;
-    --input: 40 25% 88%;
-    --ring: 84 18% 35%;
+    --border: 45 20% 85%;
+    --input: 45 20% 85%;
+    --ring: 150 30% 22%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
 
     /* Custom colors for this portfolio */
-    --olive: 84 18% 35%;
-    --olive-dark: 84 20% 28%;
-    --olive-light: 84 15% 75%;
-    --cream: 36 43% 97%;
-    --cream-dark: 40 33% 92%;
-    --terracotta: 14 45% 57%;
-    --terracotta-dark: 14 50% 45%;
-    --warm-brown: 30 25% 35%;
+    --olive: 150 30% 22%;
+    --olive-dark: 150 35% 15%;
+    --olive-light: 140 15% 70%;
+    --cream: 40 35% 96%;
+    --cream-dark: 42 30% 90%;
+    --terracotta: 18 55% 50%;
+    --terracotta-dark: 18 60% 40%;
+    --warm-brown: 30 30% 28%;
 
-    --sidebar-background: 36 43% 97%;
-    --sidebar-foreground: 84 18% 25%;
-    --sidebar-primary: 84 18% 35%;
-    --sidebar-primary-foreground: 36 43% 97%;
-    --sidebar-accent: 84 15% 90%;
-    --sidebar-accent-foreground: 84 18% 25%;
-    --sidebar-border: 40 25% 88%;
-    --sidebar-ring: 84 18% 35%;
+    --sidebar-background: 40 35% 96%;
+    --sidebar-foreground: 150 25% 18%;
+    --sidebar-primary: 150 30% 22%;
+    --sidebar-primary-foreground: 40 35% 96%;
+    --sidebar-accent: 140 15% 88%;
+    --sidebar-accent-foreground: 150 25% 18%;
+    --sidebar-border: 45 20% 85%;
+    --sidebar-ring: 150 30% 22%;
   }
 
   .dark {
-    --background: 84 20% 10%;
-    --foreground: 36 43% 97%;
-    --card: 84 18% 15%;
-    --card-foreground: 36 43% 97%;
-    --popover: 84 20% 10%;
-    --popover-foreground: 36 43% 97%;
-    --primary: 84 25% 60%;
-    --primary-foreground: 84 20% 10%;
-    --secondary: 84 15% 20%;
-    --secondary-foreground: 36 43% 97%;
-    --muted: 84 15% 20%;
-    --muted-foreground: 84 10% 60%;
-    --accent: 14 45% 57%;
-    --accent-foreground: 36 43% 97%;
+    --background: 150 30% 8%;
+    --foreground: 40 35% 96%;
+    --card: 150 25% 12%;
+    --card-foreground: 40 35% 96%;
+    --popover: 150 30% 8%;
+    --popover-foreground: 40 35% 96%;
+    --primary: 140 25% 55%;
+    --primary-foreground: 150 30% 8%;
+    --secondary: 150 20% 18%;
+    --secondary-foreground: 40 35% 96%;
+    --muted: 150 20% 18%;
+    --muted-foreground: 140 15% 60%;
+    --accent: 18 55% 50%;
+    --accent-foreground: 40 35% 96%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-    --border: 84 15% 20%;
-    --input: 84 15% 20%;
-    --ring: 84 25% 60%;
-    --sidebar-background: 84 20% 10%;
-    --sidebar-foreground: 36 43% 97%;
-    --sidebar-primary: 84 25% 60%;
-    --sidebar-primary-foreground: 84 20% 10%;
-    --sidebar-accent: 84 15% 20%;
-    --sidebar-accent-foreground: 36 43% 97%;
-    --sidebar-border: 84 15% 20%;
-    --sidebar-ring: 84 25% 60%;
+    --border: 150 20% 18%;
+    --input: 150 20% 18%;
+    --ring: 140 25% 55%;
+    --sidebar-background: 150 30% 8%;
+    --sidebar-foreground: 40 35% 96%;
+    --sidebar-primary: 140 25% 55%;
+    --sidebar-primary-foreground: 150 30% 8%;
+    --sidebar-accent: 150 20% 18%;
+    --sidebar-accent-foreground: 40 35% 96%;
+    --sidebar-border: 150 20% 18%;
+    --sidebar-ring: 140 25% 55%;
   }
 }
 
@@ -107,6 +107,10 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 
@@ -124,18 +128,10 @@
   }
 
   .section-padding {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-12 md:py-16 lg:py-20;
   }
 
   .decorative-line {
     @apply w-16 h-0.5 bg-accent;
-  }
-
-  .organic-blob {
-    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-  }
-
-  .organic-blob-alt {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   }
 }
