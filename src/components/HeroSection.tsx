@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Leaf, Globe, TrendingUp } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const HeroSection = () => {
   return (
@@ -10,8 +11,40 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="space-y-8">
+          {/* Left Content - Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative order-2 lg:order-1"
+          >
+            <div className="relative max-w-md mx-auto lg:mx-0">
+              {/* Main image container with organic shape */}
+              <div className="relative z-10 overflow-hidden organic-blob-alt bg-primary p-2">
+                <img
+                  src={profilePhoto}
+                  alt="Maulshree - ESG & Sustainability Professional"
+                  className="w-full h-auto organic-blob-alt object-cover aspect-[3/4]"
+                />
+              </div>
+              
+              {/* Decorative background element */}
+              <div className="absolute -bottom-4 -right-4 w-full h-full bg-accent/30 organic-blob -z-10" />
+              
+              {/* Floating badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.6, duration: 0.4 }}
+                className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-full shadow-lg z-20"
+              >
+                <span className="font-serif font-semibold">TISS Mumbai</span>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Right Content */}
+          <div className="space-y-8 order-1 lg:order-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -86,48 +119,28 @@ const HeroSection = () => {
                 <span>SBTi</span>
               </div>
             </motion.div>
-          </div>
 
-          {/* Right Content - Stats Card */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative"
-          >
-            <div className="bg-primary text-primary-foreground p-8 md:p-12 rounded-3xl organic-blob-alt relative z-10">
-              <div className="space-y-8">
-                <div className="flex items-center gap-3">
-                  <span className="text-accent text-2xl">✦</span>
-                  <span className="text-sm font-medium tracking-wide uppercase opacity-80">
-                    Key Highlights
-                  </span>
-                </div>
-                
-                <div className="grid grid-cols-2 gap-8">
-                  <div>
-                    <div className="text-4xl font-serif font-bold">3+</div>
-                    <div className="text-sm opacity-80 mt-1">Internships</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-serif font-bold">900+</div>
-                    <div className="text-sm opacity-80 mt-1">KM Research Expedition</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-serif font-bold">#1</div>
-                    <div className="text-sm opacity-80 mt-1">Semester Rank at TISS</div>
-                  </div>
-                  <div>
-                    <div className="text-4xl font-serif font-bold">5+</div>
-                    <div className="text-sm opacity-80 mt-1">Publications</div>
-                  </div>
-                </div>
+            {/* Stats Row */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              className="flex items-center gap-8 pt-6 border-t border-border"
+            >
+              <div>
+                <div className="text-3xl font-serif font-bold text-primary">3+</div>
+                <div className="text-sm text-muted-foreground">Internships</div>
               </div>
-            </div>
-            
-            {/* Decorative background element */}
-            <div className="absolute -bottom-6 -right-6 w-full h-full bg-accent/20 rounded-3xl organic-blob -z-10" />
-          </motion.div>
+              <div>
+                <div className="text-3xl font-serif font-bold text-primary">900+</div>
+                <div className="text-sm text-muted-foreground">KM Research</div>
+              </div>
+              <div>
+                <div className="text-3xl font-serif font-bold text-primary">#1</div>
+                <div className="text-sm text-muted-foreground">Semester Rank</div>
+              </div>
+            </motion.div>
+          </div>
         </div>
 
         {/* Scroll Indicator */}
