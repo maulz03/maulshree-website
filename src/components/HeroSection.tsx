@@ -4,55 +4,41 @@ import profilePhoto from "@/assets/profile-photo.jpeg";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center pt-20 relative overflow-hidden">
-      {/* Decorative Elements */}
-      <div className="absolute top-32 right-10 w-64 h-64 bg-primary/5 organic-blob" />
-      <div className="absolute bottom-20 left-10 w-48 h-48 bg-accent/10 organic-blob-alt" />
-      
+    <section id="home" className="min-h-screen flex items-center pt-24 pb-12 relative overflow-hidden">
       <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content - Profile Image */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left - Profile Image (smaller, professional) */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="relative order-2 lg:order-1"
+            transition={{ duration: 0.7 }}
+            className="lg:col-span-4 order-2 lg:order-1"
           >
-            <div className="relative max-w-md mx-auto lg:mx-0">
-              {/* Main image container with organic shape */}
-              <div className="relative z-10 overflow-hidden organic-blob-alt bg-primary p-2">
+            <div className="relative max-w-[280px] mx-auto lg:mx-0">
+              <div className="relative z-10 rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl">
                 <img
                   src={profilePhoto}
-                  alt="Maulshree - ESG & Sustainability Professional"
-                  className="w-full h-auto organic-blob-alt object-cover aspect-[3/4]"
+                  alt="ESG & Sustainability Professional"
+                  className="w-full h-auto object-cover aspect-[3/4]"
                 />
               </div>
               
-              {/* Decorative background element */}
-              <div className="absolute -bottom-4 -right-4 w-full h-full bg-accent/30 organic-blob -z-10" />
-              
-              {/* Floating badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.6, duration: 0.4 }}
-                className="absolute -bottom-6 -right-6 bg-primary text-primary-foreground px-6 py-3 rounded-full shadow-lg z-20"
-              >
-                <span className="font-serif font-semibold">TISS Mumbai</span>
-              </motion.div>
+              {/* Decorative accent */}
+              <div className="absolute -bottom-3 -right-3 w-full h-full bg-accent/20 rounded-2xl -z-10" />
+              <div className="absolute -top-3 -left-3 w-20 h-20 bg-primary/10 rounded-full -z-10" />
             </div>
           </motion.div>
 
           {/* Right Content */}
-          <div className="space-y-8 order-1 lg:order-2">
+          <div className="lg:col-span-8 space-y-6 order-1 lg:order-2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+              transition={{ duration: 0.5 }}
               className="flex items-center gap-2"
             >
-              <span className="text-accent">✦</span>
-              <span className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
+              <span className="text-accent text-lg">✦</span>
+              <span className="text-sm font-semibold tracking-widest text-primary uppercase">
                 ESG & Sustainability Professional
               </span>
             </motion.div>
@@ -61,40 +47,40 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-serif leading-tight"
+              className="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight"
             >
               Driving <span className="italic text-accent">Climate Strategy</span>
-              <br />
-              <span className="text-primary">WITH PURPOSE</span>
+              <br />& Corporate Sustainability
             </motion.h1>
 
             <motion.p
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg text-muted-foreground max-w-xl leading-relaxed"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed"
             >
-              Bridging academic empirical research and actionable business intelligence 
-              to drive measurable environmental and social impact. Experience at 
-              <span className="font-semibold text-foreground"> PwC</span> and 
-              <span className="font-semibold text-foreground"> Royal Enfield</span>.
+              Specializing in climate strategy and corporate reporting. With experience at 
+              <span className="font-semibold text-foreground"> PwC</span>, 
+              <span className="font-semibold text-foreground"> Royal Enfield (Eicher Group Foundation)</span>, and
+              <span className="font-semibold text-foreground"> Oren Now</span>, 
+              I bridge academic empirical research and actionable business intelligence to drive measurable environmental and social impact.
             </motion.p>
 
             <motion.div
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-wrap gap-4"
+              transition={{ duration: 0.5, delay: 0.3 }}
+              className="flex flex-wrap gap-3"
             >
               <a
                 href="#experience"
-                className="px-8 py-4 bg-primary text-primary-foreground rounded-full font-medium hover:bg-primary/90 transition-all hover:shadow-lg"
+                className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all hover:shadow-lg text-sm"
               >
                 View Experience
               </a>
               <a
                 href="#contact"
-                className="px-8 py-4 border-2 border-primary text-primary rounded-full font-medium hover:bg-primary hover:text-primary-foreground transition-all"
+                className="px-6 py-3 border-2 border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-primary-foreground transition-all text-sm"
               >
                 Get in Touch
               </a>
@@ -103,41 +89,41 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex items-center gap-6 pt-4"
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="flex flex-wrap items-center gap-4 pt-2"
             >
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Globe size={18} className="text-accent" />
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-secondary/50 px-3 py-1.5 rounded-full">
+                <Globe size={16} className="text-accent" />
                 <span>Climate Action</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Leaf size={18} className="text-accent" />
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-secondary/50 px-3 py-1.5 rounded-full">
+                <Leaf size={16} className="text-accent" />
                 <span>ESG Reporting</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <TrendingUp size={18} className="text-accent" />
-                <span>SBTi</span>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground bg-secondary/50 px-3 py-1.5 rounded-full">
+                <TrendingUp size={16} className="text-accent" />
+                <span>SBTi Net Zero</span>
               </div>
             </motion.div>
 
-            {/* Stats Row */}
+            {/* Quick Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex items-center gap-8 pt-6 border-t border-border"
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="flex items-center gap-8 pt-4 border-t border-border"
             >
               <div>
-                <div className="text-3xl font-serif font-bold text-primary">3+</div>
-                <div className="text-sm text-muted-foreground">Internships</div>
+                <div className="text-2xl font-serif font-bold text-primary">M.Sc.</div>
+                <div className="text-xs text-muted-foreground">TISS Mumbai</div>
               </div>
               <div>
-                <div className="text-3xl font-serif font-bold text-primary">900+</div>
-                <div className="text-sm text-muted-foreground">KM Research</div>
+                <div className="text-2xl font-serif font-bold text-primary">3+</div>
+                <div className="text-xs text-muted-foreground">ESG Internships</div>
               </div>
               <div>
-                <div className="text-3xl font-serif font-bold text-primary">#1</div>
-                <div className="text-sm text-muted-foreground">Semester Rank</div>
+                <div className="text-2xl font-serif font-bold text-primary">5+</div>
+                <div className="text-xs text-muted-foreground">Publications</div>
               </div>
             </motion.div>
           </div>
@@ -147,15 +133,15 @@ const HeroSection = () => {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 0.6 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+          transition={{ delay: 0.8, duration: 0.5 }}
+          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1"
         >
-          <span className="text-sm text-muted-foreground">Scroll to explore</span>
+          <span className="text-xs text-muted-foreground">Scroll</span>
           <motion.div
-            animate={{ y: [0, 8, 0] }}
+            animate={{ y: [0, 6, 0] }}
             transition={{ repeat: Infinity, duration: 1.5 }}
           >
-            <ArrowDown size={20} className="text-accent" />
+            <ArrowDown size={16} className="text-accent" />
           </motion.div>
         </motion.div>
       </div>
