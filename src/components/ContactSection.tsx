@@ -31,7 +31,9 @@ const ContactSection = () => {
           
           <div className="flex flex-wrap justify-center gap-3">
             <motion.a
-              href="mailto:maulshreepant03@gmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=maulshreepant03@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all group text-sm"
