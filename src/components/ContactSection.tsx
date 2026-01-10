@@ -39,7 +39,7 @@ const ContactSection = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all group text-sm"
             >
               <Mail size={18} />
-              <span>Send an Email</span>
+              <span>maulshreepant03@gmail.com</span>
               <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
             </motion.a>
             
