@@ -18,7 +18,7 @@ const publications = [
     icon: Mic,
     type: "Article",
     title: "India's Rising Coal Demand and Government Initiatives",
-    description: "Published with Centre for Science and Environment (CSE) analyzing energy policy",
+    description: "Wrote for Centre for Science and Environment (CSE) analyzing energy policy",
   },
   {
     icon: Youtube,
